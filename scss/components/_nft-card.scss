@@ -1,0 +1,122 @@
+@use "../globals" as g;
+
+// nft card
+
+.card {
+  background-color: g.$clr-dark-blue-card-bg;
+  border: 0;
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.block-cards {
+  .card {
+    max-width: 350px;
+  }
+}
+
+.card__image {
+  background-image: url(/dist/images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-color: g.$clr-cyan;
+  height: 310px;
+  border-radius: 7px;
+
+  img {
+    max-width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.5s ease;
+
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+}
+
+.card__heading {
+  margin-top: 2rem;
+  color: g.$clr-white;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover,
+  &:focus {
+    color: g.$clr-cyan;
+  }
+}
+
+.card__text {
+  margin-top: 2rem;
+  color: g.$clr-soft-blue;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.card__info {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.card__price {
+  color: g.$clr-cyan;
+}
+
+.card__time {
+  color: g.$clr-soft-blue;
+}
+
+.card__price,
+.card__time {
+  align-items: center;
+}
+
+.card__price .icon,
+.card__time .icon {
+  margin-right: 0.5rem;
+}
+.card__info::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: g.$clr-dark-blue-line;
+  position: absolute;
+  top: 30px;
+}
+
+.card__footer {
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.creator-avatar {
+  max-width: 30px;
+  border: solid 1px g.$clr-white;
+  border-radius: 100%;
+  margin-right: 1rem;
+}
+
+.creator-name {
+  color: g.$clr-soft-blue;
+  letter-spacing: 1px;
+
+  a,
+  a:visited {
+    color: g.$clr-white;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: g.$clr-cyan;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(217deg, 54%, 11%);
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+.container {
+  margin: 0 auto;
+  width: min(1100px, 100% - 2rem);
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.card {
+  background-color: hsl(216deg, 50%, 16%);
+  border: 0;
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.block-cards .card {
+  max-width: 350px;
+}
+
+.card__image {
+  background-image: url(/dist/images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-color: hsl(178deg, 100%, 50%);
+  height: 310px;
+  border-radius: 7px;
+}
+.card__image img {
+  max-width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+.card__image img:hover {
+  opacity: 0.3;
+}
+
+.card__heading {
+  margin-top: 2rem;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.card__heading:hover, .card__heading:focus {
+  color: hsl(178deg, 100%, 50%);
+}
+
+.card__text {
+  margin-top: 2rem;
+  color: hsl(215deg, 51%, 70%);
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.card__info {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.card__price {
+  color: hsl(178deg, 100%, 50%);
+}
+
+.card__time {
+  color: hsl(215deg, 51%, 70%);
+}
+
+.card__price,
+.card__time {
+  align-items: center;
+}
+
+.card__price .icon,
+.card__time .icon {
+  margin-right: 0.5rem;
+}
+
+.card__info::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: hsl(215deg, 32%, 27%);
+  position: absolute;
+  top: 30px;
+}
+
+.card__footer {
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.creator-avatar {
+  max-width: 30px;
+  border: solid 1px hsl(0deg, 0%, 100%);
+  border-radius: 100%;
+  margin-right: 1rem;
+}
+
+.creator-name {
+  color: hsl(215deg, 51%, 70%);
+  letter-spacing: 1px;
+}
+.creator-name a,
+.creator-name a:visited {
+  color: hsl(0deg, 0%, 100%);
+  text-decoration: none;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.creator-name a:hover, .creator-name a:focus, .creator-name a:active,
+.creator-name a:visited:hover,
+.creator-name a:visited:focus,
+.creator-name a:visited:active {
+  color: hsl(178deg, 100%, 50%);
+}
+
+.block-cards {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
