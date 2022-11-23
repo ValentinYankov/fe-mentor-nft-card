@@ -49,7 +49,7 @@ p {
   background-repeat: no-repeat;
   background-position: 50%;
   background-color: hsl(178deg, 100%, 50%);
-  height: 310px;
+  height: auto;
   border-radius: 7px;
 }
 .card__head img {
